@@ -42,6 +42,7 @@ app.patch('/company/:companyId/edit/room/:roomId', checkAuth, RoomController.edi
 
 app.post('/company/:companyId/create/worker', checkAuth, WorkerValidations.createValidation, WorkerController.createWorker);
 app.patch('/company/:companyId/edit/worker/:workerId', checkAuth, WorkerValidations.editValidation, WorkerController.editWorker);
+app.delete('/company/:companyId/delete/worker/:workerId', checkAuth, WorkerController.deleteWorker);
 
 
 //запускаємо сервер, якщо є помилка - вивести її, якщо ні, то ServerOK
