@@ -15,7 +15,7 @@ import * as WorkerController from "./controllers/WorkerController.js";
 import * as WorkerValidations from "./validations/workerValidation.js";
 
 mongoose
-    .connect("mongodb+srv://pokora_code:wwwwww@cluster0.pn4sckr.mongodb.net/blog?retryWrites=true&w=majority")
+    .connect(process.env.MONGO_URI)
     .then(() => console.log("DB ok"))
     .catch((err) => console.log("DB error", err))
 
