@@ -14,6 +14,9 @@ import * as RoomController from "./controllers/RoomController.js";
 import * as WorkerController from "./controllers/WorkerController.js";
 import * as WorkerValidations from "./validations/workerValidation.js";
 
+import * as SupportController from "./controllers/SupportController.js";
+import * as SupportValidator from "./validations/supportValidation.js";
+
 mongoose
     .connect(process.env.MONGO_URI)
     .then(() => console.log("DB ok"))
@@ -43,6 +46,9 @@ app.patch('/company/:companyId/edit/room/:roomId', checkAuth, RoomController.edi
 app.post('/company/:companyId/create/worker', checkAuth, WorkerValidations.createValidation, WorkerController.createWorker);
 app.patch('/company/:companyId/edit/worker/:workerId', checkAuth, WorkerValidations.editValidation, WorkerController.editWorker);
 app.delete('/company/:companyId/delete/worker/:workerId', checkAuth, WorkerController.deleteWorker);
+
+app.post('/ticket/add', checkAuth, SupportValidator.addTicketValidation, SupportController.addTicket);
+app.patch('/ticket/solve/:ticketId', checkAuth, SupportController.solveTicket);
 
 
 //запускаємо сервер, якщо є помилка - вивести її, якщо ні, то ServerOK
