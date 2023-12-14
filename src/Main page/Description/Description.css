@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.description {
+    background: #1C1C1C;
+    width: 100%;
+    z-index: 1;
+}
+
+.description h2 {
+    color: #FFF;
+    text-align: left;
+    font-family: "Times New Roman", "Segoe UI";
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description h3 {
+    color: #FFF;
+    font-family: "Courier New", serif;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 150;
+    line-height: normal;
+    max-width: 570px;
+}
+
+.description .description1 .dsc_image {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    z-index: 3;
+}
+
+
+/*Перший опис у стрічці*/
+.description .description1 .dsc_image {
+    position: relative;
+}
+
+.description .description1 {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.description .description1 .dsc_text {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 239px;
+    min-width: 100px;
+}
+
+.description .description1 .dsc_text h3 {
+    text-align: right;
+}
+
+.description .description1 .dsc_image {
+    max-width: 1500px;
+    max-height: 770px;
+}
+
+.description .description1 .dsc_image img {
+    width: 1040px;
+    height: 745px;
+}
+
+
+/*Другий опис у стрічці*/
+.description .description2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.description .description2 .dsc_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding-top: 350px;
+}
+
+.description .description2 .dsc_text h3 {
+    text-align: left;
+}
+
+.description .description2 .dsc_text h2 {
+    margin-left: 70px;
+}
+
+.description .description2 .dsc_image {
+    width: 1007px;
+    height: 771px;
+    margin-left: 239px;
+    z-index: 2;
+}
+
+.description .description2 .dsc_image img {
+    width: 1007px;
+    height: 771px;
+}
+
+.description .description2 .dsc_image .circle1 {
+    width: 490px;
+    height: 490px;
+    z-index: -1;
+}
+
+.description .description2 .dsc_image .circle2 {
+    width: 480px;
+    height: 480px;
+    z-index: -1;
+}
+
+.description .description2 .dsc_image .circle3 {
+    width: 420px;
+    height: 420px;
+    z-index: -1;
+}
+
+/*Третій опис у стрічці*/
+.description .description3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.description .description3 .dsc_text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    padding-top: 250px;
+}
+
+.description .description3 .dsc_text h3 {
+    text-align: right;
+    margin-left: 70px;
+}
+
+.description .description3 .dsc_image {
+    max-width: 1041px;
+    max-height: 755px;
+}
+
+.description .description3 .dsc_image img {
+    max-width: 1041px;
+    max-height: 755px;
+}
+
+/*Четвертий опис у стрічці*/
+.description .description4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description .description4 .dsc_image {
+    max-width: 945px;
+    max-height: 669px;
+}
+
+.description .description4 .dsc_image img {
+    max-width: 945px;
+    max-height: 669px;
+}
+
+.description .description4 .dsc_text {
+    width: 1006px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.description .description4 .dsc_text h2 {
+    text-align: center;
+}
+.description .description4 .dsc_text h3 {
+    text-align: center;
+    max-width: 1200px;
+}
+
+
+
+
+

@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+.background {
+    width: 100%;
+    min-height: 500px;
+    background-image: url("https://bogatyr.club/uploads/posts/2021-11/thumbs/1636937269_2-bogatyr-club-p-krutoi-chernii-fon-2.jpg");
+}
+
+.background .header {
+    display: flex;
+}
+
+.background .logo_class {
+    width: 62px;
+    height: 43px;
+}
+
+.background .header .header_btns{
+    display: flex;
+    width: 100%;
+}
+.background .header .header_btns .Ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.background .welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+}
+.background .welcome h1{
+    color: #FFF;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 218;
+    line-height: normal;
+}
+
+.background .welcome h5{
+    color: #FFF;
+    text-align: center;
+    font-family: "Courier New", serif;
+    font-size: 24px;
+    font-weight: 218;
+    line-height: normal;
+}
+.background .welcome .more_btn{
+    border-radius: 21px;
+}
