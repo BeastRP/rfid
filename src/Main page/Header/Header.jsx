@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import backgroundImg from '../../images/background.jpg';
 import logoImg from '../../images/logo.png'
 import './Header.css';
+//Імпорт усіх використаних тегів з MaterialUI
 import {
     Box,
     Button,
     createTheme,
-    Divider, Link,
+    Divider, Drawer, Link,
     List,
     ListItem,
     ListItemIcon,
@@ -15,6 +16,8 @@ import {
     ThemeProvider,
     Tooltip
 } from "@mui/material";
+
+//Імпорт усіх використаних іконок з MaterialUI
 import Avatar from '@mui/material/Avatar';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
@@ -22,6 +25,7 @@ import {grey, yellow} from "@mui/material/colors";
 import {Logout, Settings} from "@mui/icons-material";
 import * as PropTypes from "prop-types";
 import LoginIcon from '@mui/icons-material/Login';
+//Палітра кольорів для елементів блоків MaterialUI
 const theme = createTheme({
     status: {
         danger: '#e53e3e',
@@ -35,46 +39,122 @@ const theme = createTheme({
 });
 
 const Header = () => {
+    const [drawerOpen, setDrawerOpen] = useState(false);
+
+    const handleDrawerOpen = () => {
+        setDrawerOpen(true);
+    };
+
+    const handleDrawerClose = () => {
+        setDrawerOpen(false);
+    };
+
     return (
         <ThemeProvider theme={theme}>
             <div className="background">
                 <div className="header">
                     <div className="header_btns">
-                        <img className="logo_class" src={logoImg} alt="backgroundImg"/>
-                        <List className="Ul" sx={{ width:'100%' , height: 50}}>
-                            <ListItem className="Li"><Button className="Underheader_A" sx={{
-                                width: '20%',
-                                height: 50,
-                                color: grey[100]
-                            }}>Можливості</Button></ListItem>
-                            <ListItem className="Li"><Button className="Underheader_A" sx={{
-                                width: '20%',
-                                height: 50,
-                                color: grey[100]
-                            }}>Підписка</Button></ListItem>
-                            <ListItem className="Li"><Button className="Underheader_A" sx={{
-                                width: '20%',
-                                height: 50,
-                                color: grey[100]
-                            }}>Політика</Button></ListItem>
-                            <ListItem className="Li"><Button className="Underheader_A" sx={{
-                                width: '20%',
-                                height: 50,
-                                color: grey[100]
-                            }}>Підтримка</Button></ListItem>
-                        </List>
-                        <Profile/>
-                    </div>
+                        <Button
+                            onClick={handleDrawerOpen}
+                            className="Underheader_A"
+                            sx={{
+                                width: '7%',
+                                height: 70,
+                                color: grey[600],
+                            }}
+                        >
+                            <img className="logo_class" src={logoImg} alt="backgroundImg" />
+                        </Button>
+                        <Drawer
+                            anchor="left"
+                            open={drawerOpen}
+                            onClose={handleDrawerClose}
+                            sx={{ width: 200 }}
+                        >
+                            <List sx={{backgroundColor: grey[500]}}>
+                                <ListItem>
+                                    <Button
+                                        className="Underheader_A"
+                                        sx={{
+                                            width: '100%',
+                                            height: 50,
+                                            color: grey[100],
+                                        }}
+                                    >
+                                        Головна
+                                    </Button>
+                                </ListItem>
 
+                                <ListItem>
+                                    <Button
+                                        className="Underheader_A"
+                                        sx={{
+                                            width: '100%',
+                                            height: 50,
+                                            color: grey[100],
+                                        }}
+                                    >
+                                        Можливості
+                                    </Button>
+                                </ListItem>
+                                <ListItem>
+                                    <Button
+                                        className="Underheader_A"
+                                        sx={{
+                                            width: '100%',
+                                            height: 50,
+                                            color: grey[100],
+                                        }}
+                                    >
+                                        Підписка
+                                    </Button>
+                                </ListItem>
+                                <ListItem>
+                                    <Button
+                                        className="Underheader_A"
+                                        sx={{
+                                            width: '100%',
+                                            height: 50,
+                                            color: grey[100],
+                                        }}
+                                    >
+                                        Політика
+                                    </Button>
+                                </ListItem>
+                                <ListItem>
+                                    <Button
+                                        className="Underheader_A"
+                                        sx={{
+                                            width: '100%',
+                                            height: 50,
+                                            color: grey[100],
+                                        }}
+                                    >
+                                        Підтримка
+                                    </Button>
+                                </ListItem>
+                            </List>
+                        </Drawer>
+                        <Profile />
+                    </div>
                 </div>
                 <div className="welcome">
                     <h1>Office Track Pro</h1>
-                    <br/>
+                    <br />
                     <h5>Абсолютний контроль, простота ведення, вища продуктивність</h5>
-                    <br/>
-                    <Button className="more_btn" variant="contained"
-                            sx={{maxWidth: 279, height: 50, color: grey[100], backgroundColor: grey[700]}}>Дізнатися
-                        більше</Button>
+                    <br />
+                    <Button
+                        className="more_btn"
+                        variant="contained"
+                        sx={{
+                            maxWidth: 279,
+                            height: 50,
+                            color: grey[100],
+                            backgroundColor: grey[700],
+                        }}
+                    >
+                        Дізнатися більше
+                    </Button>
                 </div>
             </div>
         </ThemeProvider>

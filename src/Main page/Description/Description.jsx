@@ -62,6 +62,8 @@ const Description = () => {
                         системою!</h3>
                 </div>
             </div>
+            <br/>
+            <br/>
         </div>
     );
 }

@@ -68,7 +68,7 @@
 }
 
 .description .description1 .dsc_image img {
-    width: 1040px;
+    max-width: 1040px;
     height: 745px;
 }
 
@@ -183,9 +183,165 @@
 .description .description4 .dsc_text h2 {
     text-align: center;
 }
+
 .description .description4 .dsc_text h3 {
     text-align: center;
     max-width: 1200px;
+}
+
+/*Адаптивна верстка*/
+@media screen and (max-width: 1850px) {
+    .description .description1,
+    .description .description2,
+    .description .description3,
+    .description .description4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description .description1 .dsc_text,
+    .description .description2 .dsc_text,
+    .description .description3 .dsc_text,
+    .description .description4 .dsc_text {
+        width: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -80px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .description .description2 .dsc_text,
+    .description .description3 .dsc_text {
+        padding-top: 120px;
+        padding-bottom: 150px;
+    }
+
+    .description .description4 .dsc_text {
+        padding-top: 120px;
+    }
+
+    .description .description1 .dsc_text h3,
+    .description .description1 .dsc_text h2,
+    .description .description2 .dsc_text h3,
+    .description .description2 .dsc_text h2,
+    .description .description3 .dsc_text h3,
+    .description .description3 .dsc_text h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 30px;
+    }
+
+    .description .description2 .dsc_image {
+        order: 1;
+        margin-right: 120px;
+    }
+
+    .description .description2 .dsc_text {
+        order: 2;
+    }
+
+    .description .description3 .dsc_image {
+        margin-left: 120px;
+    }
+}
+
+
+@media screen and (max-width: 1030px) {
+    .description .description1,
+    .description .description2,
+    .description .description3,
+    .description .description4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description .description1 .dsc_text,
+    .description .description2 .dsc_text,
+    .description .description3 .dsc_text,
+    .description .description4 .dsc_text {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -80px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    .description .description2 .dsc_text,
+    .description .description3 .dsc_text {
+        padding-top: 120px;
+        padding-bottom: 150px;
+    }
+
+    .description .description1 .dsc_text h3,
+    .description .description1 .dsc_text h2,
+    .description .description2 .dsc_text h3,
+    .description .description2 .dsc_text h2,
+    .description .description3 .dsc_text h3,
+    .description .description3 .dsc_text h2,
+    .description .description4 .dsc_text h3,
+    .description .description4 .dsc_text h2{
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 20px;
+        max-width: 300px;
+    }
+
+    .description .description2 .dsc_image {
+        order: 1;
+    }
+
+    .description .description2 .dsc_text {
+        order: 2;
+    }
+
+    .description .description3 .dsc_image {
+        margin-left: 120px;
+    }
+
+    .description .description1 .dsc_image img,
+    .description .description2 .dsc_image img,
+    .description .description3 .dsc_image img,
+    .description .description4 .dsc_image img {
+        max-width: 300px;
+        max-height: 275px;
+    }
+
+    .description .description1 .dsc_image,
+    .description .description2 .dsc_image,
+    .description .description3 .dsc_image,
+    .description .description4 .dsc_image {
+        max-width: 400px;
+        max-height: 275px;
+    }
+    .description .description1 .dsc_image{
+        max-height: 220px;
+    }
+    .description .description1 .dsc_image img{
+        max-height: 220px;
+    }
+    .description .description2 .dsc_image{
+        margin-right: 220px;
+    }
+    .description .description3 .dsc_image{
+        margin-right: 110px;
+    }
+    .description .description2 .dsc_image{
+        max-width: 300px;
+        max-height: 220px;
+    }
+    .description .description2 .dsc_image img{
+        max-width: 300px;
+        max-height: 220px;
+    }
 }
 
 

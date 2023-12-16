@@ -1,0 +1,54 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://bogatyr.club/uploads/posts/2021-11/thumbs/1636937269_2-bogatyr-club-p-krutoi-chernii-fon-2.jpg");
+    text-align: center;
+    height: 102px;
+}
+.footer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.footer .logo_class {
+    max-width: 62px;
+    max-height: 43px;
+}
+.footer .social-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+}
+.footer .social-block h6{
+    color: #FFF;
+    text-align: center;
+    font-family: "Courier New";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: normal;
+}
+.footer .social-block .social-list{
+    max-height: 102px;
+    padding-bottom: 10px;
+}
+.footer .social-block .social-list .twitterBtn img,
+.footer .social-block .social-list .facebookBtn img,
+.footer .social-block .social-list .pinterestBtn img,
+.footer .social-block .social-list .instagramBtn img{
+    max-width: 50px !important;
+    max-height: 48px !important;
+}
+
+@media screen and (max-width: 580px){
+    .footer .social-block h6{
+        color: #FFF;
+        text-align: center;
+        font-family: "Courier New";
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 200;
+        line-height: normal;
+    }
+}

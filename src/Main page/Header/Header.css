@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
 
 body {
     margin: 0;
@@ -25,6 +28,7 @@ body {
 .background .header .header_btns{
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 .background .header .header_btns .Ul{
     display: flex;
@@ -58,4 +62,7 @@ body {
 }
 .background .welcome .more_btn{
     border-radius: 21px;
+}
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
+    background-color: #4d4d4d !important;
 }
